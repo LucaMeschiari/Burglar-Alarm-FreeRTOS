@@ -1,0 +1,184 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue153;\red0\green0\blue0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \uc0\u8226 }{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \uc0\u8226 }{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \uc0\u8226 }{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \uc0\u8226 }{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \uc0\u8226 }{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \uc0\u8226 }{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}}
+\margl1440\margr1440\margb1800\margt1800
+\deftab708
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\f0\b\fs56 \cf0 \expnd0\expndtw0\kerning0
+\up0 \nosupersub \ulnone \outl0\strokewidth0 \strokec0 Burglar Alarm System\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b\fs36 \expnd0\expndtw0\kerning0
+Declaration\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b0\fs24 \expnd0\expndtw0\kerning0
+The Burglar Alarm Project is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\
+\
+The Burglar Alarm Project is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. See <{\field{\*\fldinst{HYPERLINK "http://www.gnu.org/licenses/"}}{\fldrslt \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc2 \strokec2 http://www.gnu.org/licenses/}}> for a copy of the GNU General Public License.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b\fs36 \expnd0\expndtw0\kerning0
+Program overview\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b0\fs24 \expnd0\expndtw0\kerning0
+The program developed is a simple house burglar alarm system, it uses 4 sensors to check if there is any effraction, 4 led to signal on what sensor the anomaly is sensed and a touch screen to give the user the basic informations about the system and get input from the visualized virtual keyboard.\
+The sensors are simulated by 4 pushbutton connected to the I2C controller and the first sensor(so the first button) is assumed to be the one connected to the front door.\
+The system has 3 main states:\
+\pard\tx20\tx200\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\li180\fi-180\pardirnatural
+\ls1\ilvl0{\listtext	\'95	}Not armed: when the alarm is turned off\
+{\listtext	\'95	}Armed:when the alarm is turned on and is checking for effractions\
+{\listtext	\'95	}Alarm: when the system has recognized an anomaly on one of the sensors and so is ringing.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+There is also one more state that I have introduced to allow the user to have 30 seconds to deactivate the system when he enter from the front door before the system pass in the alarm state. This fourth state is called in this project Pre-Alarm state.\
+The activation and the deactivation of the system, since there is only the fully armed option, is done entering a for digits code code. 
+\b \expnd0\expndtw0\kerning0
+(The code used is 1-2-3-4)
+\b0 \expnd0\expndtw0\kerning0
+.\
+The touch screen lcd display offers a graphical interface to the user communicating the state of the system also informing the user on the amount of time remaining if the sensor 1 is triggered (in the armed state) before switching to the alarm state. it also show a virtual numeric keyboard which can be used to enter the code to manage the system, the code inserted is shown on the screen and in case a wrong code is typed an error message appears on the screen to notify the user.\
+The LEDs will show the sensors who has detected the effraction (only when the system is in Alarm state) and also if another sensor is triggered its corresponding LED would be turned on. Thanks to that the user can have a full overview of the state of the system.\
+For a better understanding of the functionalities of the system the following state diagram can be helpful:\page \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 \kerning1\expnd0\expndtw0 \up0 \nosupersub \ulnone \outl0\strokewidth0 {{\NeXTGraphic pastedGraphic.pdf \width8660 \height6700
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b\fs36 \cf0 \expnd0\expndtw0\kerning0
+\up0 \nosupersub \ulnone \outl0\strokewidth0 \strokec0 System Design:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b0\fs24 \expnd0\expndtw0\kerning0
+Basically the burglar alarm software need to handle the following inputs and outputs:\
+\pard\tx20\tx200\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\li180\fi-180\pardirnatural
+\ls2\ilvl0{\listtext	\'95	}Sensors/Button input\
+{\listtext	\'95	}LED output\
+{\listtext	\'95	}LCD output\
+{\listtext	\'95	}LCD input\
+{\listtext	\'95	}Timer management to control the 30 seconds delay\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+Some of this functions can be grouped since they have a similar interface, this is the case for the Sensor and LED management and the LCD management.\
+All the needed functionalities, grouped together when possible, are provided by three tasks:\
+\pard\tx20\tx200\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\li180\fi-180\pardirnatural
+\ls3\ilvl0{\listtext	\'95	}Lcd task: manage the LCD input and output.\
+{\listtext	\'95	}Sensors task: manage the Button(sensors) input and the LEDs output\
+{\listtext	\'95	}Timer task: used to control the 30 seconds delay.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+All this tasks provide information but a centralized task which retrieve all the gathered data, make decisions about the state of the alarm and send information to all the other tasks about how to update the output is needed. This task is called Managing task.\
+The communications between tasks are achieved by queues to allow tasks to send also commands and not only a synchronization signal like the semaphores. These control signals are integer numbers and they are used to exchange data between tasks. To achieve a bidirectional communication between the tasks a couple of queues is used for each connection (since a single queue not provide a full-duplex bidirectional communication channel).\
+The architecture of the system is explained in the following image:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 \kerning1\expnd0\expndtw0 \up0 \nosupersub \ulnone \outl0\strokewidth0 {{\NeXTGraphic 1__#$!@%!#__pastedGraphic.pdf \width8080 \height6220
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+\cf0 \expnd0\expndtw0\kerning0
+\up0 \nosupersub \ulnone \outl0\strokewidth0 \strokec0 \
+To allow two task to share the same queue all the queues used for intertask communication are created in the main function and passed to the tasks as an argument when they are created.\
+This architecture allow to separate the access to different outputs and inputs to have a cleaner system. For example the Lcd is managed only by the Lcd Task and if the managing task want to change the data displayed it needs to send a command to the Lcd Task instead of changing that itself. \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b \expnd0\expndtw0\kerning0
+LCD management\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b0 \expnd0\expndtw0\kerning0
+In this section I will explain the main characterics of the LCD interface, the technical details about the LCD task are explained in the Task Design section.\
+The LCD interface is basically divided in two parts: the one on the top shows a touchscreen numeric keyboard which provide the user feedback about the tapping of a button changing its colour.\
+The bottom part of the interface shows the system status, the code entered, inform the user if a wrong code is inserted and if the system is in pre alarm mode inform the user about the situation drawing a red rectangle and showing a 30 second countdown with 5 seconds ticks.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b \expnd0\expndtw0\kerning0
+LEDs management:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b0 \expnd0\expndtw0\kerning0
+The LEDs are turned on when the system is in armed (sensors2-3-4), pre alarm (sensors 2-3-4) or alarm state and the corresponding sensor is triggered. If two or more sensors are triggered all the corresponding LEDs are lighted. If the system is in armed state and the sensor one is triggered the corresponding LED will be turned on only after the expiration of the 30 seconds delay.\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b\fs36 \expnd0\expndtw0\kerning0
+Tasks Design\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b0\fs24 \expnd0\expndtw0\kerning0
+Since all the task are interconnected is quite complicated to explain their functionalities separately but it still useful to understand the main structure of the system.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b \expnd0\expndtw0\kerning0
+\
+Managing Task:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b0 \expnd0\expndtw0\kerning0
+The managing task gather all the data from the other tasks and make decisions about the state of the system. After, if it is needed, it sends commands (using the queues) to the other tasks to update the outputs.\
+The core of the task in an infinite loop containing the following checks in order:\
+\pard\tx20\tx200\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\li180\fi-180\pardirnatural
+\ls4\ilvl0{\listtext	\'95	}Check sensor status: get the status of the sensors and if is needed (depending on the current state) change the state of the system and update the Lcd and the LED.\
+{\listtext	\'95	}Check Lcd Input: Check if the user has inserted a number and he has inserted 4 digits so far perform the matching with the correct code. In case it is correct update the state of the system(if needed) and update the outputs. If the code is wrong update the Lcd to notify the user.\
+{\listtext	\'95	}Check the timer: If the system is in pre alarm mode check the time elapsed to manage the 30 seconds delay and update the countdown on the Lcd screen.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b \expnd0\expndtw0\kerning0
+Lcd Task:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b0 \expnd0\expndtw0\kerning0
+The Lcd task manage the Lcd and draw the graphic interface on it. It uses 3 functions:\
+\pard\tx20\tx200\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\li180\fi-180\pardirnatural
+\ls5\ilvl0{\listtext	\'95	}button_pressed: using the coordinates of the pressure point highlight the pressed button and return the associated digit.\
+{\listtext	\'95	}restore_button: restore a button to the normal color if is not pressed anymore\
+{\listtext	\'95	}write_state: draw the bottom part of the display(the one showing the state of the system, the code entered, the wrong code message and the countdown)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+To manage actions on the LCD an interrupt hander is introduced, when the handler is called it only manage the interrupt and send data to the main function using a queue.\
+In the main function of the task inside a infinite loop the following checking are performed:  \
+\pard\tx20\tx200\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\li180\fi-180\pardirnatural
+\ls6\ilvl0{\listtext	\'95	}Check the LCD queue (the one from the interrupt handler) to have information about the user input, the LCD is updated and the data about the pressed button is sent to the Managing task using the queue. To avoid bouncing a 50 ms delay is introduced and The pressure on the display is checked to get a single input for every tap. To get informations from the LCD (position of the touch and pressure) the interrupt is disabled and then reenabled after the readings.\
+{\listtext	\'95	}Check the queue from the managing task to get informations about the updates to perform on the display.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b \expnd0\expndtw0\kerning0
+Sensors Task\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b0 \expnd0\expndtw0\kerning0
+The sensor task manage the button input and the LED output.\
+It basically polls the sensors using the provided getButtons function to retrieve the state of the buttons. The previous state of the buttons is stored and compared with the new state to get information only when the button is pushed and not for the all time that is triggered. The button information is sent to the managing task using a queue. The sensors task also listen for commands sent by the managing task to update the LED output.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b \expnd0\expndtw0\kerning0
+Timer Task\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\b0 \expnd0\expndtw0\kerning0
+The timer task manage the 30 seconds delay and also update the managing task about the remaining time every 5 seconds when the delay is checked.\
+It listens for a start command form the managing task and if it is received the counting is started, The functions used to manage the time are xTaskGetTickCount to get the current time (this function is called before executing other code to have a correct timing) and the vTaskDelayUntil to have 5 seconds ticks. The time remaining is then sent to the managing task using a queue. The task also listen for a stop command from the managing task to stop and reset the timer in case the system state changes.\
+To have a better precision and avoid delays the timer task has an higher priority than all the other tasks.\cf0 \kerning1\expnd0\expndtw0 \up0 \nosupersub \ulnone \outl0\strokewidth0 \
+\pard\tqr\tx9632\pardeftab708\pardirnatural
+
+\fs20 \cf3 \expnd0\expndtw0\kerning0
+\up0 \nosupersub \ulnone \outl0\strokewidth0 \strokec3 Luca Meschiari	
+\fs18 \expnd0\expndtw0\kerning0
+          or sensors 2/3/4\
+                 triggered}
